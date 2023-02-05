@@ -8,8 +8,8 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 
 public class GuessingGame extends JFrame {
-    private JTextField txtGuess;
-    private JLabel lblOutput;
+    private final JTextField txtGuess;
+    private final JLabel lblOutput;
     private int theNumber;
     public void checkGuess() {
         String guessText = txtGuess.getText();
@@ -57,17 +57,8 @@ public class GuessingGame extends JFrame {
         txtGuess.setColumns(10);
 
         JButton btnNewButton = new JButton("Guess!");
-        btnNewButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                checkGuess();
-            }
-        });
-        txtGuess.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                checkGuess();
-            }
-        });
+        btnNewButton.addActionListener(e -> checkGuess());
+        txtGuess.addActionListener(e -> checkGuess());
         btnNewButton.setBounds(172, 145, 89, 23);
         getContentPane().add(btnNewButton);
 
