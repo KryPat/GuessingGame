@@ -1,7 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 
 public class GuessingGame extends JFrame {
     private final JTextField txtGuess;
@@ -66,31 +65,19 @@ public class GuessingGame extends JFrame {
         getContentPane().add(lblNewLabel_1);
 
         txtGuess = new JTextField();
-        txtGuess.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                checkGuess();
-            }
-        });
+        txtGuess.addActionListener(e -> checkGuess());
         txtGuess.setBounds(313, 89, 26, 20);
         getContentPane().add(txtGuess);
         txtGuess.setColumns(10);
 
         btnNewButton = new JButton("Guess!");
-        btnNewButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                checkGuess();
-            }
-        });
+        btnNewButton.addActionListener(e -> checkGuess());
         //txtGuess.addActionListener(e -> checkGuess());
         btnNewButton.setBounds(172, 145, 89, 23);
         getContentPane().add(btnNewButton);
 
         btnPlayAgain = new JButton("Play Again");
-        btnPlayAgain.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                newGame();
-            }
-        });
+        btnPlayAgain.addActionListener(e -> newGame());
         btnPlayAgain.setBounds(259, 145, 95, 23);
         getContentPane().add(btnPlayAgain);
         /*
