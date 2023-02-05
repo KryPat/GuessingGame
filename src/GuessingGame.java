@@ -1,15 +1,18 @@
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
+import javax.swing.*;
 import java.awt.*;
-import javax.swing.JTextField;
-import javax.swing.JButton;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class GuessingGame extends JFrame {
     private final JTextField txtGuess;
     private final JLabel lblOutput;
+    JButton btnPlayAgain;
     private int theNumber;
     private int numberOfTries = 1;
+    JButton btnNewButton;
+
+
+
     public void checkGuess() {
         String guessText = txtGuess.getText();
         String message = "";
@@ -25,7 +28,9 @@ public class GuessingGame extends JFrame {
             }
             else {
                 message = guess + " is correct. You win after: " + numberOfTries + " tries!" + " Let's play again!";
-                newGame();
+                //newGame();
+                btnPlayAgain.setVisible(true);
+                btnNewButton.setBounds(85, 145, 89, 23);
             }
         }   catch (Exception e) {
             message = "Enter a whole number between 1 and 100, and try again.";
@@ -37,6 +42,12 @@ public class GuessingGame extends JFrame {
     }
     public void newGame() {
         theNumber = (int)(Math.random() * 100 + 1);
+        lblOutput.setText("Enter a number above and click Guess!");
+        //message = "Guess a number between 1 and 100:";
+        numberOfTries = 1;
+        btnPlayAgain.setVisible(false);
+        btnNewButton.setBounds(172, 145, 89, 23);
+
     }
     public GuessingGame() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -55,20 +66,48 @@ public class GuessingGame extends JFrame {
         getContentPane().add(lblNewLabel_1);
 
         txtGuess = new JTextField();
+        txtGuess.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                checkGuess();
+            }
+        });
         txtGuess.setBounds(313, 89, 26, 20);
         getContentPane().add(txtGuess);
         txtGuess.setColumns(10);
 
-        JButton btnNewButton = new JButton("Guess!");
-        btnNewButton.addActionListener(e -> checkGuess());
-        txtGuess.addActionListener(e -> checkGuess());
+        btnNewButton = new JButton("Guess!");
+        btnNewButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                checkGuess();
+            }
+        });
+        //txtGuess.addActionListener(e -> checkGuess());
         btnNewButton.setBounds(172, 145, 89, 23);
         getContentPane().add(btnNewButton);
+
+        btnPlayAgain = new JButton("Play Again");
+        btnPlayAgain.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                newGame();
+            }
+        });
+        btnPlayAgain.setBounds(259, 145, 95, 23);
+        getContentPane().add(btnPlayAgain);
+        /*
+
+        JButton btnPlayAgain = new JButton("New game");
+        btnPlayAgain.setVisible(false);
+        btnPlayAgain.addActionListener(e -> newGame());
+        btnPlayAgain.setBounds(259, 145, 89, 23);
+        getContentPane().add(btnPlayAgain);
+
+         */
 
         lblOutput = new JLabel("Enter a number above and click Guess!");
         lblOutput.setHorizontalAlignment(SwingConstants.CENTER);
         lblOutput.setBounds(10, 207, 414, 14);
         getContentPane().add(lblOutput);
+
     }
 
     public static void main(String[] args) {
