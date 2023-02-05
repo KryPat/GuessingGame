@@ -14,14 +14,23 @@ public class GuessingGame extends JFrame {
     public void checkGuess() {
         String guessText = txtGuess.getText();
         String message = "";
-        int guess = Integer.parseInt(guessText);
-        if (guess < theNumber)
-            message = guess + " is too low. Try again.";
-        else if (guess > theNumber)
-            message = guess + " is too high. Try again.";
-        else
-            message = guess + " is correct. You win!";
-        lblOutput.setText(message);
+        try {
+            int guess = Integer.parseInt(guessText);
+            if (guess < theNumber)
+                message = guess + " is too low. Try again.";
+            else if (guess > theNumber)
+                message = guess + " is too high. Try again.";
+            else {
+                message = guess + " is correct. You win! Let's play again!";
+                newGame();
+            }
+        }   catch (Exception e) {
+            message = "Enter a whole number between 1 and 100, and try again.";
+    } finally {
+            lblOutput.setText(message);
+            txtGuess.requestFocus();
+            txtGuess.selectAll();
+        }
     }
     public void newGame() {
         theNumber = (int)(Math.random() * 100 + 1);
@@ -49,6 +58,12 @@ public class GuessingGame extends JFrame {
 
         JButton btnNewButton = new JButton("Guess!");
         btnNewButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                checkGuess();
+            }
+        });
+        txtGuess.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 checkGuess();
             }
