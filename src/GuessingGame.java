@@ -9,17 +9,22 @@ public class GuessingGame extends JFrame {
     private final JTextField txtGuess;
     private final JLabel lblOutput;
     private int theNumber;
+    private int numberOfTries = 1;
     public void checkGuess() {
         String guessText = txtGuess.getText();
         String message = "";
         try {
             int guess = Integer.parseInt(guessText);
-            if (guess < theNumber)
+            if (guess < theNumber) {
                 message = guess + " is too low. Try again.";
-            else if (guess > theNumber)
+                numberOfTries += 1;
+            }
+            else if (guess > theNumber) {
                 message = guess + " is too high. Try again.";
+                numberOfTries += 1;
+            }
             else {
-                message = guess + " is correct. You win! Let's play again!";
+                message = guess + " is correct. You win after: " + numberOfTries + " tries!" + " Let's play again!";
                 newGame();
             }
         }   catch (Exception e) {

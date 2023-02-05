@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33088997-ef22-4319-a489-a353862d710f" name="Changes" comment="Enchanced gui and try-catch-finally method added">
+    <list default="true" id="33088997-ef22-4319-a489-a353862d710f" name="Changes" comment="removed unused import statement">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GuessingGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GuessingGame.java" afterDir="false" />
     </list>
@@ -111,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675599698973</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="removed unused import statement">
+      <created>1675599811087</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675599811087</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -140,6 +147,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="basic gui no restart" />
     <MESSAGE value="Enchanced gui and try-catch-finally method added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Enchanced gui and try-catch-finally method added" />
+    <MESSAGE value="removed unused import statement" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed unused import statement" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/GuessingGame$GuessingGame.ic" NAME="GuessingGame Coverage Results" MODIFIED="1675615239927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
