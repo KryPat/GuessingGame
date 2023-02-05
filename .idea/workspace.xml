@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33088997-ef22-4319-a489-a353862d710f" name="Changes" comment="basic gui no restart">
+    <list default="true" id="33088997-ef22-4319-a489-a353862d710f" name="Changes" comment="Enchanced gui and try-catch-finally method added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GuessingGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GuessingGame.java" afterDir="false" />
     </list>
@@ -97,7 +97,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675005640258</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Enchanced gui and try-catch-finally method added">
+      <created>1675599388498</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675599388498</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Enchanced gui and try-catch-finally method added">
+      <created>1675599698973</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675599698973</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -125,6 +139,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="basic gui no restart" />
-    <option name="LAST_COMMIT_MESSAGE" value="basic gui no restart" />
+    <MESSAGE value="Enchanced gui and try-catch-finally method added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Enchanced gui and try-catch-finally method added" />
   </component>
 </project>
